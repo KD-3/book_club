@@ -71,6 +71,7 @@
                 {% if book.active %}
                     <img class="card-img-top" src="{{ book.book.image.url }}" alt="Card image cap">
                     <div class="card-body">
+                        <p class="card-text"><b>Name : </b>{{ book.book.name }}</p>
                         <p class="card-text"><b>Book Review : </b>{{ book.review }}</p>
                         <p><a class="btn btn-secondary" href="{{ book.book.file.url }}" role="button">Read now &raquo;</a>
                         </p>
