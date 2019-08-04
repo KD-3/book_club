@@ -46,14 +46,37 @@
                 <h5 class="h5 orange-text"><i></i>“A room without books is like a body without a soul.”</h5>
                 <h2 class="card-title h2 my-4 py-2">Welcome to the Book Club !</h2>
                 <p class="mb-4 pb-2 px-md-5 mx-md-5">Experience the joy of reading !</p>
-                <a class="btn peach-gradient" href="{% url 'book-list' %}"><i class="fas fa-book left"></i> Go to the book list !</a>
+                <a class="btn peach-gradient" href="{% url 'book-list' %}"><i class="fas fa-book left"></i> Go to the
+                    book list !</a>
 
             </div>
         </div>
     </div>
     <br>
     <br>
-        <div class="container">
-            <h1 style="font-family: 'Darker Grotesque', sans-serif; text-underline: black;">About Us</h1>
-        </div>
+    <div class="container">
+        <h1 style="font-family: 'Darker Grotesque', sans-serif; text-underline: black;">About Us</h1>
+        <br>
+        <p>A place for people who find Elysium between the pages of a book. A place for endless discussions on books and
+            never-ending fandom talks. A place to connect with people who believe in the magic of words woven to form a
+            beautiful creation. A place where the bibliophiles, the fanfiction bugs. the storytellers, the avid readers
+            come together to explore a world of books.
+            A place for one and all. </p>
+        <br>
+        <br>
+        <h1 style="font-family: 'Darker Grotesque', sans-serif; text-underline: black;">Book Of the Month</h1>
+        <br>
+        <div class="card" style="width: 18rem;">
+            {% for book in boftm %}
+                {% if book.active %}
+                    <img class="card-img-top" src="{{ book.book.image.url }}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"><b>Book Review : </b>{{ book.review }}</p>
+                        <p><a class="btn btn-secondary" href="{{ book.book.file.url }}" role="button">Read now &raquo;</a>
+                        </p>
+                    </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+    </div>
 {% endblock %}
