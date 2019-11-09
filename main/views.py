@@ -34,3 +34,6 @@ class ContactPageView(TemplateView):
         context['contacts'] = Contact.objects.all()
 
         return context
+
+class MyBooksView(TemplateView):
+    template_name = 'main/mybooks.html'

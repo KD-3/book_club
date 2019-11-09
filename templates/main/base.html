@@ -45,6 +45,11 @@
                     <li>
                         <a class="navbar-brand" href="{% url 'home' %}">Book Club</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'mybooks' %}">My Books</a>
+                    </li>
+                    {% endif %}
                 </ul>
                     {#                    {% if user.is_authenticated %}#}
                 <ul class="navbar-nav justify-content-end">
