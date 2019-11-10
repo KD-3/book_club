@@ -1,9 +1,9 @@
 <div class="col-lg-4">
     {% if contact.image %}
-        <img class="rounded-circle"
-             src="{{ contact.image.url }}"
-    {% endif %}
-             alt="Generic placeholder image" width="120" height="120">
+    <img class="rounded-circle"
+         src="{{ contact.image.url }}"
+         {% endif %}
+         alt="Generic placeholder image" width="120" height="120">
     <h2 style="font-family: 'Darker Grotesque', sans-serif;">{{ contact.name }}</h2>
     <h3 style="font-family: 'Anton', sans-serif;">{{ contact.position }}</h3>
     <p><a class="btn btn-secondary" href="#" role="button">Contact &raquo;</a></p>

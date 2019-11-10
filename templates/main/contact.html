@@ -1,20 +1,20 @@
 {% extends "main/base.html" %}
 {% load socialaccount %}
 {% block content %}
+<br>
+<div class="container-fluid">
+    <h1 style="font-family: 'Anton', sans-serif;">Contact Us</h1>
     <br>
-    <div class="container-fluid">
-        <h1 style="font-family: 'Anton', sans-serif;">Contact Us</h1>
     <br>
-    <br>
-    </div>
-    <div class="container marketing">
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-            {% for contact in  contacts %}
-                {#                {% if candidate.constituency.name == userad.profile.constituency.name %}#}
-                {% include 'main/contact_card_mixin.html' %}
-                {#                {% endif %}#}
-            {% endfor %}
-        </div><!-- /.row -->
-    </div>
+</div>
+<div class="container marketing">
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        {% for contact in contacts %}
+        {# {% if candidate.constituency.name == userad.profile.constituency.name %}#}
+        {% include 'main/contact_card_mixin.html' %}
+        {# {% endif %}#}
+        {% endfor %}
+    </div><!-- /.row -->
+</div>
 {% endblock %}
