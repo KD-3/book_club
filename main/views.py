@@ -13,7 +13,7 @@ class HomePageView(TemplateView):
 
 
 class BookListPageView(TemplateView):
-    template_name = 'main/book_list.html'
+    template_name = 'frontend_new/book_list.html'
 
     def get_context_data(self, **kwargs):
         context = super(BookListPageView, self).get_context_data()
@@ -35,5 +35,16 @@ class ContactPageView(TemplateView):
 
         return context
 
+
 class MyBooksView(TemplateView):
     template_name = 'main/mybooks.html'
+
+
+class AboutUsView(TemplateView):
+    template_name = 'frontend_new/about.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(AboutUsView, self).get_context_data()
+        context['contacts'] = Contact.objects.all()
+
+        return context
