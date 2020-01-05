@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <h2>Issued Items </h2>
+    <h2>Issued Books </h2>
     {% for book in books %}
 
 
@@ -53,7 +53,7 @@
 
     <br>
 
-    <h2>New Items </h2>
+    <h2>Issue a new book </h2>
 
     <form method="post" action="{% url 'users:mybooks' %}">
         {% csrf_token %}
