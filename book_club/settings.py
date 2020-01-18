@@ -24,7 +24,7 @@ SECRET_KEY = 'r(5z##yv@o$&$%#((1%d)1v)p3fr=ms)a!3+x)=qm%sa^ua!4b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bookclub2019.pythonanywhere.com']
+ALLOWED_HOSTS = ['bookclub2019.pythonanywhere.com', '127.0.0.1']
 
 # Application definition
 

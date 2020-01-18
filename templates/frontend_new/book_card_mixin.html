@@ -7,11 +7,16 @@
         {% endif %}
         <div class="text p-4 d-block">
             <div class="meta mb-3">
-{#                <div><a href="{{ book.file.url }}">Read Now</a></div>#}
+                {#                <div><a href="{{ book.file.url }}">Read Now</a></div>#}
                 {#                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>#}
             </div>
-            <h3 class="heading"><a href="#">{{ book.name }}</a></h3>
+            <h2 style="text-align: center" class="heading"><a href="#">{{ book.name }}</a></h2>
+            <h4 class="heading">Author : {{ book.author }}</h4>
+            <h4 class="heading">Book Number : {{ book.book_number }}</h4>
+            <h4 class="heading">Issued To : {{ book.issued_to }}</h4>
+            {% if book.file %}
             <p><a class="btn btn-primary" href="{{ book.file.url }}" role="button">Read now &raquo;</a></p>
+            {% endif %}
         </div>
     </div>
 </div>
